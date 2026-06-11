@@ -1,0 +1,82 @@
+{
+  "engagement": {
+    "client_name": "Northwind Mutual Insurance",
+    "id": 1
+  },
+  "flat_manifest": {
+    "sha256": "358228638b68412a53c52306efd3e8218209c0df29bcd928d57de73272ace810",
+    "text": "# Castle Audit Packet Integrity Manifest\n# Engagement: 1\n# Generated: 2026-06-11T05:18:52.798546+00:00\n#\n# Each row: <object_type>:<id>  <sha256>  <stamped_at>  [<descriptor>]\napproval:1  d5a8caa9063bd6527accaa2e833beda9a017937d5e46efd6b36653e7d326e54f  2026-06-11T05:18:35.481617  [ai_use_case_inventory v1 (phase=ai_governance_assessment)]\napproval:2  e88ee95a75e93b26331525f00b08824bf1385d1cde4e58a0046e5a452f58c114  2026-06-11T05:18:35.484389  [ai_risk_register v1 (phase=ai_governance_assessment)]\napproval:3  0501f47a6c81551633a5f1c378235d52cc4e6a61edf0024260980adb88a8c7eb  2026-06-11T05:18:35.487950  [missing_policies v1 (phase=ai_governance_assessment)]\napproval:4  38face07d27a46d0cc19cf80371502a6d2667f2aa40c99ff6e842e66dbb8ce92  2026-06-11T05:18:35.490780  [vendor_ai_findings v1 (phase=ai_governance_assessment)]\napproval:5  3c9046489f6022c309709220718144f13dbb85a07db533de445980040a7e5727  2026-06-11T05:18:35.493471  [contract_gaps_triage v1 (phase=ai_governance_assessment)]\napproval:6  4010cd345854165f52a105605851de06406bb91a523eeca9ca65d83ac5e27aba  2026-06-11T05:18:35.495677  [required_controls v1 (phase=ai_governance_assessment)]\napproval:7  872158944e22233e38695e6c8e6b4ed86cd7403afe26d475b97e608cecadc957  2026-06-11T05:18:35.497999  [remediation_plan v1 (phase=remediation)]\napproval:8  b339b2d16125aa8ad35a2408cbefd7cd3888b4c9a37bf0805b3e9ef4356306b3  2026-06-11T05:18:35.499963  [evidence_checklist v1 (phase=evidence_collection)]\napproval:9  7c9d6354c0289e2f1d4f5e151d112f709cc43ff89e7a4c7e522220c7124d61ce  2026-06-11T05:18:35.502328  [board_report v1 (phase=ai_governance_assessment)]\napproval:10  7b7456bce219e7e68669b0b81d71ac2f614f0dcc9afadd1e3b3a68f86dda95b8  2026-06-11T05:18:35.506342  [control_statement v1 (phase=audit_prep)]\n# Manifest SHA-256: 358228638b68412a53c52306efd3e8218209c0df29bcd928d57de73272ace810\n"
+  },
+  "generated_at": "2026-06-11T05:18:52.799046+00:00",
+  "leaves": [
+    {
+      "artifact_sha256": "d5a8caa9063bd6527accaa2e833beda9a017937d5e46efd6b36653e7d326e54f",
+      "leaf_hash": "0fe2456f08200e67f9d0b0a87a014418ae8e943252731aabb611ae138ae2f452",
+      "object_id": 1,
+      "object_type": "approval"
+    },
+    {
+      "artifact_sha256": "e88ee95a75e93b26331525f00b08824bf1385d1cde4e58a0046e5a452f58c114",
+      "leaf_hash": "1f42e515a804d67aaf8ce0aa6b60153c6497adc5b72719b568367aa3b5c151b5",
+      "object_id": 2,
+      "object_type": "approval"
+    },
+    {
+      "artifact_sha256": "7b7456bce219e7e68669b0b81d71ac2f614f0dcc9afadd1e3b3a68f86dda95b8",
+      "leaf_hash": "604f0f99a671d05c4c8086c8b7f915284e84f805cb3b04cb8d24a743ef2f3b3e",
+      "object_id": 10,
+      "object_type": "approval"
+    },
+    {
+      "artifact_sha256": "872158944e22233e38695e6c8e6b4ed86cd7403afe26d475b97e608cecadc957",
+      "leaf_hash": "6ca80c95cb9fb4adda7691284b70a4b52623de0921d13882b7579cc4b421beb8",
+      "object_id": 7,
+      "object_type": "approval"
+    },
+    {
+      "artifact_sha256": "38face07d27a46d0cc19cf80371502a6d2667f2aa40c99ff6e842e66dbb8ce92",
+      "leaf_hash": "7d06214e5c10bb2e533b47eb04a202957900b5ebf4b0b96c5bf623d26ed81ff2",
+      "object_id": 4,
+      "object_type": "approval"
+    },
+    {
+      "artifact_sha256": "7c9d6354c0289e2f1d4f5e151d112f709cc43ff89e7a4c7e522220c7124d61ce",
+      "leaf_hash": "90f14aa45d1a07c5fb2f80977fb5a9dca4fd33e0d71d559945075e7d3b1bd106",
+      "object_id": 9,
+      "object_type": "approval"
+    },
+    {
+      "artifact_sha256": "4010cd345854165f52a105605851de06406bb91a523eeca9ca65d83ac5e27aba",
+      "leaf_hash": "b5a281db6aca9ef6ffe25c82b0309c5e45481814b14377d85dcb98a46835f1da",
+      "object_id": 6,
+      "object_type": "approval"
+    },
+    {
+      "artifact_sha256": "3c9046489f6022c309709220718144f13dbb85a07db533de445980040a7e5727",
+      "leaf_hash": "db85fc9214ad2fcb34003b0f439c3ab99cabf0505da1d702c3b77a9b4026671a",
+      "object_id": 5,
+      "object_type": "approval"
+    },
+    {
+      "artifact_sha256": "b339b2d16125aa8ad35a2408cbefd7cd3888b4c9a37bf0805b3e9ef4356306b3",
+      "leaf_hash": "e7a68c0c1177cf40117d60843b7db1d6114962e2a7dcd84baac646c3272cf9cf",
+      "object_id": 8,
+      "object_type": "approval"
+    },
+    {
+      "artifact_sha256": "0501f47a6c81551633a5f1c378235d52cc4e6a61edf0024260980adb88a8c7eb",
+      "leaf_hash": "fd4ad092dc1c4c2155b385806cfc3ce7d0487096b6e588e602e412227318920c",
+      "object_id": 3,
+      "object_type": "approval"
+    }
+  ],
+  "merkle_root": "2ad4ae43188cc29bf4a0655ab60545ac055295ed9571e8e6516de6c077acd243",
+  "merkle_version": 1,
+  "packet_version": 1,
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAqQp3N4e4xwYHTlQ1DMSITVa9oJq6yFiqXJ83oTFG8+Q=\n-----END PUBLIC KEY-----\n",
+    "signed_sha256": "1c4e6de0f006a3714de0a8e0368046102908e70f0691d45ab35e6cf38a3f9d56",
+    "value": "a62890503098ac454ecf7e9a80bebba1f5581850bdbb403af1dfd53446efdafad05115c01c8b4a2dec1841a16c905f19ee00daabc4f193fc02f2c2ba9fc06503"
+  }
+}

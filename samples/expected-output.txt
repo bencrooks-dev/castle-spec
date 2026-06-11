@@ -1,0 +1,4 @@
+PASS: verified 10 artifact(s) for engagement 1 (Northwind Mutual Insurance)
+  merkle_root: 2ad4ae43188cc29bf4a0655ab60545ac055295ed9571e8e6516de6c077acd243
+  Ed25519 signature valid; all artifact hashes + inclusion proofs hold.
+  NOTE: proves integrity (unchanged + who-attested), NOT evidence completeness.
