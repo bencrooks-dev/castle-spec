@@ -28,7 +28,7 @@ the recompute formulas are stated normatively in [SPEC.md](SPEC.md).
 |---|---|
 | PK-1 | The packet carries `packet_version`, `merkle_version`, `merkle_root`, and every leaf, so any single artifact is independently provable. |
 | PK-2 | Leaf hash is `SHA-256(0x00 \|\| "{object_type}:{object_id}" \|\| 0x1F \|\| artifact_sha256)`; interior hash is `SHA-256(0x01 \|\| raw(left) \|\| raw(right))`; leaves sort ascending; odd nodes promote; the root is recomputable from the packet with a stock hash library. |
-| PK-3 | The signature is Ed25519 over the canonical packet bytes (sorted-keys compact ASCII JSON, `signature` block excluded), with the public key embedded in the packet. |
+| PK-3 | The signature is Ed25519 over the canonical packet bytes (sorted-keys compact ASCII JSON, `signature` and post-signing `rekor_anchor` blocks excluded), with the public key embedded in the packet. |
 | PK-4 | A standalone verifier with zero implementation imports accepts a well-formed packet. |
 | PK-5 | Any tamper (leaf, root, signature, or any signed body field) fails verification closed. |
 
@@ -55,7 +55,7 @@ version; that claim is meaningless and is disallowed.
 
 | Implementation | Language | Profiles | Spec | Kit | Result | Evidence |
 |---|---|---|---|---|---|---|
-| [Castle](https://github.com/bencrooks-dev/Castle) (reference) | Python | Schema-Core, Attestation-Packet | 0.1 | v0.1 | 14/14 | `conformance` CI job in the Castle repository |
+| [Castle](https://castlegrc.com) (reference) | Python | Schema-Core, Attestation-Packet | 0.1 | v0.1 | 14/14 | `conformance` CI job in the reference implementation's repository (private today); reproducible from this repository with a Castle checkout |
 
 No implementations other than the reference implementation are registered.
 That is the honest current state of a v0.1 draft.

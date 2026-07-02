@@ -1,4 +1,5 @@
 PASS: verified 10 artifact(s) for engagement 1 (Northwind Mutual Insurance)
   merkle_root: 2ad4ae43188cc29bf4a0655ab60545ac055295ed9571e8e6516de6c077acd243
-  Ed25519 signature valid; all artifact hashes + inclusion proofs hold.
-  NOTE: proves integrity (unchanged + who-attested), NOT evidence completeness.
+  Ed25519 signature valid against the key EMBEDDED in the packet; all artifact hashes + inclusion proofs hold.
+  WARNING: no --pubkey was pinned, so this proves INTEGRITY ONLY — NOT authorship. A forged packet self-signed with any key also passes this check. Re-run with --pubkey set to the publisher's out-of-band published key to prove WHO attested.
+  NOTE: integrity proven; authorship UNVERIFIED (key unpinned); evidence completeness NOT proven.

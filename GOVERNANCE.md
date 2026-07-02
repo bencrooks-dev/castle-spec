@@ -24,7 +24,7 @@ not verified anything.
 
 ## Current stage (be honest)
 
-The schema is at **v0.1 (Draft)**. There is exactly one implementation (the
+The schema is at **v0.2 (Draft)**. There is exactly one implementation (the
 reference implementation, Castle, which is pre-1.0 with no production
 customers) and no external adopters. Today the project is **maintainer-led**
 (a single maintainer, effectively a BDFL model). This is normal and

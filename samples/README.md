@@ -33,6 +33,10 @@ Expected: exit code 0 and the output in `expected-output.txt`, beginning
 PASS: verified 10 artifact(s) for engagement 1 (Northwind Mutual Insurance)
 ```
 
+The transcript includes a WARNING that authorship is unverified. That is
+expected and correct: no `--pubkey` is pinned (the sample key is a
+throwaway), so the verifier proves integrity only and says so.
+
 Then prove to yourself it fails closed: change any character of any
 `artifact_sha256`, the `merkle_root`, the signature, or the client name, and
 run it again. Exit code 1.
