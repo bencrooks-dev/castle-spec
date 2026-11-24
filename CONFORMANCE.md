@@ -32,6 +32,18 @@ the recompute formulas are stated normatively in [SPEC.md](SPEC.md).
 | PK-4 | A standalone verifier with zero implementation imports accepts a well-formed packet. |
 | PK-5 | Any tamper (leaf, root, signature, or any signed body field) fails verification closed. |
 
+### Partner-Submission (PS-1 .. PS-7), companion spec [PARTNER-SUBMISSION.md](PARTNER-SUBMISSION.md)
+
+| ID | Requirement (one line) |
+|---|---|
+| PS-1 | The schema is valid JSON Schema 2020-12 and the sample manifest validates. |
+| PS-2 | A receiver accepts the sample bundle, returns a receipt that validates, and binds it to the manifest bytes by SHA-256. |
+| PS-3 | Digest mismatch, size mismatch and a missing file each reject that item only; the other items are still received. |
+| PS-4 | Unknown keys (other than `x-` private keys), a missing expiry on an expiring type, and an expiry before receipt are rejected; an over-age document is received and flagged `stale`. |
+| PS-5 | A manifest with a wrong version, no named submitter, no items or duplicate filenames is unusable; a filename with a path is never read. |
+| PS-6 | The schema, the reference receiver and the spec table state the same vocabulary, max ages and expiring types. |
+| PS-7 | The vocabulary matches the reference implementation (runs only where it is importable). |
+
 ## How to claim conformance
 
 1. Run the kit against your implementation (kit v0.1 binds the checks to the

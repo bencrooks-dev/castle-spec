@@ -57,3 +57,17 @@ castle --db sqlite:///$TMP/demo.db verify --engagement 1 \
 directory). Regenerating produces a different `generated_at`, a different
 signature, and (with a fresh key) a different embedded public key; the Merkle
 structure of the same seeded data is deterministic.
+
+## Sample partner submission (PDS lite)
+
+| File | What it is |
+|---|---|
+| `sample-submission.json` | A PDS 0.1 manifest from a fictional MGA ("Keystone Underwriters") to a fictional carrier: a continuity plan and an E&O certificate. |
+| `sample-submission.zip` | The same manifest as `manifest.json` plus the two synthetic text files, ready for the receiver. |
+
+```bash
+python verifier/pds_check.py samples/sample-submission.zip --today 2026-11-24
+```
+
+Expected: exit code 0 and both items `received`. Run it with `--today 2027-07-01`
+and the certificate is rejected as `expired` (exit code 1).

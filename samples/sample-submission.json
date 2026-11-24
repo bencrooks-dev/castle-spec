@@ -1,0 +1,37 @@
+{
+  "pds_version": "0.1",
+  "partner": {
+    "legal_name": "Keystone Underwriters",
+    "kind": "mga",
+    "id": "keystone"
+  },
+  "recipient": {
+    "legal_name": "Northwind Mutual",
+    "program": "small-commercial"
+  },
+  "submitted_by": {
+    "name": "Hannah Becker",
+    "email": "hannah@keystone.example"
+  },
+  "submitted_at": "2026-11-24T15:00:00Z",
+  "items": [
+    {
+      "requirement": "doc_bcp",
+      "filename": "keystone-bcp-2026.txt",
+      "media_type": "text/plain",
+      "document_date": "2026-10-01",
+      "sha256": "f76f8e927d6f0ef1a0ad62c715218f3a0156f044ff8f7f806652cb3650c67d2c",
+      "size_bytes": 135
+    },
+    {
+      "requirement": "doc_coi_eo",
+      "filename": "keystone-eo-certificate.txt",
+      "media_type": "text/plain",
+      "document_date": "2026-06-01",
+      "expires_on": "2027-06-01",
+      "request_ref": "REQ-1042",
+      "sha256": "c8e4a2b6fd7ade07d11733441622b215a407958330d1af430a73a70445fbc43f",
+      "size_bytes": 145
+    }
+  ]
+}

@@ -63,6 +63,7 @@ pin who signed, and `--json` for a machine-readable verdict; see
 | Path | What it is |
 |---|---|
 | [SPEC.md](SPEC.md) | The normative specification (RFC 2119 language), implementable standalone: packet format, receipts, delegation chains, trust registry, anchoring, structured output. |
+| [PARTNER-SUBMISSION.md](PARTNER-SUBMISSION.md) | Companion spec, lite: one JSON manifest plus files for an MGA or TPA to submit required documents (continuity plans, policies, certificates, licenses) to a carrier, a shared document vocabulary, and the receipt. Schema in [schemas/](schemas/), stdlib receiver `verifier/pds_check.py`. |
 | [CONFORMANCE.md](CONFORMANCE.md) | Conformance registry and the OS-1..7 / PK-1..5 requirement summaries. |
 | [conformance/](conformance/) | The executable conformance kit (pytest, kit v0.1, coupled to the reference implementation). |
 | [verifier/](verifier/) | `castle_verify.py`, the standalone verifier (stdlib plus the `cryptography` package), byte-identical to the reference implementation's copy. |
@@ -91,6 +92,18 @@ Three adoption levels, smallest first:
 If you are building a second implementation, open an issue first; making the
 kit run against you is exactly the feedback a v0.x draft needs.
 
+## Submit partner documents (PDS lite)
+
+For MGAs, TPAs and carriers who just need a common way to hand over the
+documents a carrier requires: describe the files in one manifest, zip it with
+the files, and the receiver checks every digest, date and expiry and returns a
+receipt. A receipt is never an acceptance. See
+[PARTNER-SUBMISSION.md](PARTNER-SUBMISSION.md):
+
+```bash
+python verifier/pds_check.py samples/sample-submission.zip --today 2026-11-24
+```
+
 ## Run the conformance kit
 
 Kit v0.1 runs against the reference implementation, so Castle must be
@@ -102,6 +115,9 @@ python -m pytest conformance/ -v
 ```
 
 14 checks: OS-1..OS-7 (Schema-Core) and PK-1..PK-5 (Attestation-Packet).
+The Partner Document Submission checks (PS-1..PS-7,
+`conformance/test_partner_submission.py`) need only `jsonschema`, not Castle;
+PS-7 is skipped when Castle is not importable.
 See [conformance/README.md](conformance/README.md) for the requirement
 mapping and for what the coupling means for a port to another language.
 
